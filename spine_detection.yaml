@@ -1,0 +1,14 @@
+# Spine Detection Dataset Configuration
+# Generated automatically by convert_d3set_to_yolo.py
+
+path: /home/hpc/iwb3/iwb3103h/thesis/YOLO/yolo_dataset
+train: images/train
+val: images/val
+
+# Classes
+nc: 1
+names: ['spine']
+
+# Optional: Dataset info
+# Source: DeepD3 dataset
+# Task: Dendritic spine detection
