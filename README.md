@@ -29,7 +29,7 @@ The ensemble uses a **complementary fusion strategy** where:
 ### Prerequisites
 
 - Python 3.8+
-- CUDA-capable GPU (recommended)
+- NVIDIA GPU with CUDA compute capability 7.0 or higher
 - 16GB+ RAM
 
 ### Install Dependencies
@@ -46,64 +46,10 @@ conda create -n <env-name> python=3.10
 # Activate enivronement
 conda activate <env-name>
 
-# Install Pytorch with CUDA=11.8
-conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=11.8 -c pytorch -c nvidia
 
 # Install requirements
 pip install -r requirements.txt
 ```
-
-##  Complete Project Structure
-
-```
-spine-detection/
-├──  dataset/                      # Data files
-│   ├── DeepD3_Training.d3set
-│   ├── DeepD3_Validation.d3set
-│   ├── DeepD3_Benchmark.tif
-│   ├── Annotations_and_Clusters.csv
-│   └── *.tif                        # Rater annotations
-├──  yolo_dataset/                 # YOLO-formatted data
-│   ├── images/
-│   ├── labels/
-│   └── spine_detection.yaml
-│
-├──  Training Scripts
-│   ├── convert_d3set_to_yolo.py     # Dataset conversion
-│   ├── yolov8_optimized_training.py # YOLO training
-│   ├── training_punet.py            # Prob-UNet training
-│   └── hpunet_main.py               # Hierarchical Prob-UNet
-│
-├──  Inference Scripts
-│   ├── benchmark_eval_pipeline.py   # YOLO inference + eval
-│   ├── punet_infer.py             # PUNet inference
-│   ├── hpunet_infer.py             # HPUNet inference
-│   └── yolo_prob_fusion.py         # Ensemble fusion
-│
-├──  Analysis Scripts
-│   ├── uncertainity_maps.py        # Uncertainty quantification
-│   ├── inter-rater.py              # Inter-rater agreement
-│   ├── visualize_ensemble.py       # Visualization
-│   └── dedup.py                    # 3D NMS utilities
-│
-├──  Model Architectures
-│   ├── prob_unet_with_tversky.py   # Prob-UNet model
-│   ├── hpunet_model.py             # Hierarchical model
-│   └── unet_blocks.py              # U-Net components
-│
-├──  Utilities
-│   ├── hpunet_datagen.py           # Data generators
-│   ├── hpunet_train.py             # Training loops
-│   └── utils.py                    # Helper functions
-│
-├──  Configuration
-│   ├── requirements.txt            # Dependencies
-│   ├── hpunet_config.json          # HPUNet config
-│
-└──  README.md                     # 
-```
-
----
 ---
 
 ## Dataset Setup
