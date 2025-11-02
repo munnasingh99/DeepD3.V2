@@ -1,0 +1,7 @@
+dataset/*.tif
+dataset/*.d3set
+dataset/*.prediction
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
