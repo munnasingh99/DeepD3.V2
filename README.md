@@ -39,12 +39,12 @@ The ensemble uses a **complementary fusion strategy** where:
 git clone https://github.com/munnasingh99/DeepD3.V2
 cd DeepD3.V2
 
-# Create virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Conda environment
+# Create conda environment
 conda create -n <env-name> python=3.10
+
+# Activate enivronement
+conda activate <env-name>
 
 # Install Pytorch with CUDA=11.8
 conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=11.8 -c pytorch -c nvidia
