@@ -83,7 +83,11 @@ python -c "import flammkuchen as fl; print('Training:', fl.load('dataset/DeepD3_
 ```
 ## You can download the pretrained model weights here:
 
-[![Download Folder](https://img.shields.io/badge/Download%20Folder-Google%20Drive-blue?logo=google-drive)](https://drive.google.com/drive/folders/1Tumvs2tvK_8prUtySTKB1MjSL_kkrpMp?usp=sharing)
+All pretrained model weights (Prob-UNet, HProb-UNet, YOLOv8-P2, and Ensemble Fusion) and additional datasets are available on FAUbox:
+
+[![Download Weights](https://img.shields.io/badge/Download%20Weights-FAUbox-blue?logo=nextcloud)](https://faubox.rrze.uni-erlangen.de/getlink/fiXRenPG3vvpEa3ZzZ8Jpz/)
+
+**🔒 Password:** `deepd3`
 
 
 
